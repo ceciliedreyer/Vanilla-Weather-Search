@@ -59,6 +59,11 @@ body {
 .current-location {
   display: flex;
   justify-content: space-between;
+  font-weight: 200;
+}
+
+.current-time {
+  font-weight: 200;
 }
 
 .material-symbols-outlined {
@@ -74,13 +79,16 @@ body {
 .current-temp {
   text-align: center;
 }
-
-.current-temp-icon {
-  font-size: 40px;
-}
 .temp {
   margin: 60px 0 5px;
   font-size: 80px;
+}
+.current-temp-icon {
+  font-size: 40px;
+}
+
+.current-temp-description {
+  padding-top: 20px;
 }
 
 .weather-detail-list {
@@ -90,6 +98,7 @@ body {
   text-align: center;
   padding: 0;
   margin: 60px 0 0;
+  font-weight: 700;
 }
 
 .weather-detail {
@@ -110,4 +119,8 @@ footer {
   margin: 60px;
   border-top: 1px solid white;
   padding-top: 30px;
+}
+
+a {
+  color: blue;
 }
