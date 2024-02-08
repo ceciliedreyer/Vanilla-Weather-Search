@@ -10,40 +10,44 @@ body {
   background-color: aliceblue;
   max-width: 30%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 10px;
+  margin-bottom: 60px;
   padding: 20px 20px 20px 20px;
   border-radius: 30px;
 }
 .header-form {
   border-bottom: 1px solid white;
-  padding-bottom: 20px;
+  background-color: aliceblue;
+  max-width: 30%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-top: 80px;
+  border-radius: 30px;
 }
 
 .search-form {
-  max-width: 60%;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .search-form-input {
   border: none;
-  margin: 0 auto;
-  max-width: 60%;
+  width: 60%;
   background-color: white;
   border-radius: 6px;
-  padding: 2px 5px;
-  font-size: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
   border: 1px solid white;
+  text-align: center;
 }
 
 .search-form-button {
   border: 1px solid blue;
-  max-width: 30%;
   background-color: blue;
   color: aliceblue;
   border-radius: 6px;
-  padding: 2px 5px;
-  font-size: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
 }
 
 .search-form-button:hover {
@@ -119,7 +123,7 @@ body {
 footer {
   text-align: center;
   font-size: 7px;
-  margin: 60px;
+  margin: 30px;
   border-top: 1px solid white;
   padding-top: 30px;
 }
