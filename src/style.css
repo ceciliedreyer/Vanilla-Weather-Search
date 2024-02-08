@@ -1,3 +1,111 @@
 body {
+  font-family: "Roboto Mono", monospace;
+  background: image();
+}
+
+.weather-app {
+  background-color: aliceblue;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px 10px 20px 10px;
+  border-radius: 30px;
+}
+.header-form {
+  border-bottom: 1px solid white;
+  padding-bottom: 20px;
+}
+
+.search-form {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.search-form-input {
+  border: none;
+  margin: 0 auto;
+  max-width: 60%;
+  background-color: white;
+  border-radius: 6px;
+  padding: 2px 5px;
+  font-size: 10px;
+  border: 1px solid white;
+}
+
+.search-form-button {
+  border: 1px solid blue;
+  max-width: 30%;
   background-color: blue;
+  color: aliceblue;
+  border-radius: 6px;
+  padding: 2px 5px;
+  font-size: 10px;
+}
+
+.search-form-button:hover {
+  background-color: white;
+  border: 1px solid blue;
+  color: blue;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin: 5px 0 5px;
+}
+
+.current-location {
+  display: flex;
+  justify-content: space-between;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  position: relative;
+  margin-top: -2px;
+  font-size: 15px;
+  margin-right: 3px;
+}
+
+.current-temp {
+  text-align: center;
+}
+
+.current-temp-icon {
+  font-size: 40px;
+}
+.temp {
+  margin: 20px 0 5px;
+  font-size: 80px;
+}
+
+.weather-detail-list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.weather-detail {
+  font-size: 10px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+footer {
+  text-align: center;
+  font-size: 7px;
+  margin: 60px;
+  border-top: 1px solid white;
+  padding-top: 30px;
 }
