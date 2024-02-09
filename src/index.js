@@ -1,5 +1,5 @@
 function updateWeather(response) {
-  console.log(response.data);
+  console.log(response.data.condition.icon_url);
   let temperature = response.data.temperature.current;
   let temperatureElement = document.querySelector("#temp");
   let weatherDescription = response.data.condition.description;
@@ -9,10 +9,20 @@ function updateWeather(response) {
   let currentCity = document.querySelector("#current-location-city");
   let feelsLike = Math.round(response.data.temperature.feels_like);
   let feelsLikeElement = document.querySelector("#weather-detail-feels");
-  let humidity = response.data.temperature.humidity;
+  let humidity = `${response.data.temperature.humidity}%`;
   let humidityElement = document.querySelector("#weather-detail-humidity");
-  let windSpeed = response.data.wind.speed;
+  let windSpeed = `${Math.round(response.data.wind.speed)}km/h`;
   let windElement = document.querySelector("#weather-detail-speed");
+
+  let date = new Date(response.data.time * 1000);
+  let timeElement = document.querySelector("#current-time");
+  let iconElement = document.querySelector("#current-temp-icon");
+  let icon = `<img
+              src="${response.data.condition.icon_url}"
+              class="current-temp-icon"
+            />`;
+
+  console.log(iconElement);
 
   currentCity.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
@@ -20,6 +30,8 @@ function updateWeather(response) {
   feelsLikeElement.innerHTML = feelsLike;
   humidityElement.innerHTML = humidity;
   windElement.innerHTML = windSpeed;
+  timeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = icon;
 }
 
 function searchCity(city) {
@@ -58,6 +70,14 @@ function formatDate(date) {
 
   let currentDay = days[day];
 
+  if (currentMinute < 10) {
+    currentMinute = `0${currentMinute}`;
+  }
+
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+
   return `${currentDay}, ${currentHour}:${currentMinute}`;
 }
 
@@ -65,5 +85,4 @@ let now = new Date();
 
 let timeElement = document.querySelector("#current-time");
 
-searchCity("Aarhus");
-timeElement.innerHTML = formatDate(now);
+searchCity("Skæring");
